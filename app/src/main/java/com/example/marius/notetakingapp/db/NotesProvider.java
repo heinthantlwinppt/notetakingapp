@@ -1,4 +1,4 @@
-package com.example;
+package com.example.marius.notetakingapp.db;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;
@@ -8,8 +8,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-
-import com.DBOpenHelper;
 
 /**
  * Created by Marius on 2/21/2018.

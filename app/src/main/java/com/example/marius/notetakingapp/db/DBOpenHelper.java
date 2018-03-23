@@ -1,4 +1,4 @@
-package com;
+package com.example.marius.notetakingapp.db;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

@@ -1,4 +1,4 @@
-package com.example.marius.notetakingapp;
+package com.example.marius.notetakingapp.activities;
 
 import android.app.AlertDialog;
 import android.app.LoaderManager;
@@ -7,23 +7,22 @@ import android.content.CursorLoader;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.Loader;
-import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.CursorAdapter;
 import android.widget.ListView;
-import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
-import com.DBOpenHelper;
-import com.example.NotesProvider;
+import com.example.marius.notetakingapp.db.DBOpenHelper;
+import com.example.marius.notetakingapp.db.NotesProvider;
+import com.example.marius.notetakingapp.db.NotesCursorAdapter;
+import com.example.marius.notetakingapp.R;
 
 public class MainActivity extends AppCompatActivity
 implements LoaderManager.LoaderCallbacks<Cursor>{

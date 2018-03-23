@@ -1,4 +1,4 @@
-package com.example.marius.notetakingapp;
+package com.example.marius.notetakingapp.db;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.CursorAdapter;
 import android.widget.TextView;
 
-import com.DBOpenHelper;
+import com.example.marius.notetakingapp.R;
 
 /**
  * Created by Mariu on 2/21/2018.

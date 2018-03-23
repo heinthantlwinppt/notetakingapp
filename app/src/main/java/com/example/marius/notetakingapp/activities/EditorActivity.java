@@ -1,4 +1,4 @@
-package com.example.marius.notetakingapp;
+package com.example.marius.notetakingapp.activities;
 
 import android.content.ContentValues;
 import android.content.Intent;
@@ -11,8 +11,9 @@ import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.DBOpenHelper;
-import com.example.NotesProvider;
+import com.example.marius.notetakingapp.db.DBOpenHelper;
+import com.example.marius.notetakingapp.db.NotesProvider;
+import com.example.marius.notetakingapp.R;
 
 
 public class EditorActivity extends AppCompatActivity {

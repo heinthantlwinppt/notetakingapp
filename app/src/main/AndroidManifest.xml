@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,18 +18,18 @@
         </activity>
 
         <provider
-            android:name="com.example.NotesProvider"
+            android:name=".db.NotesProvider"
             android:authorities="com.example.notetakingapp.notesprovider"
             android:exported="false" />
 
         <activity
-            android:name=".EditorActivity"
+            android:name=".activities.EditorActivity"
             android:label="@string/title_activity_editor"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".activities.MainActivity"
             android:theme="@style/AppTheme.AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.marius.notetakingapp.MainActivity" />
+                android:value="com.example.marius.notetakingapp.activities.MainActivity" />
         </activity>
     </application>
 
