@@ -1,6 +1,8 @@
 package com.example.marius.notetakingapp.activities;
 
+import android.app.AlertDialog;
 import android.content.ContentValues;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
@@ -70,7 +72,23 @@ public class EditorActivity extends AppCompatActivity {
                 finishEditing();
                 break;
             case R.id.action_delete:
-                deleteNote();
+                DialogInterface.OnClickListener dialogClickListener =
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int button) {
+                                if (button == DialogInterface.BUTTON_POSITIVE) {
+                                    //Insert Data management code here
+                                     deleteNote();
+                                }
+                            }
+                        };
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setMessage(getString(R.string.are_you_sure))
+                        .setPositiveButton(getString(android.R.string.yes), dialogClickListener)
+                        .setNegativeButton(getString(android.R.string.no), dialogClickListener)
+                        .show();
+
+
                 break;
         }
 
